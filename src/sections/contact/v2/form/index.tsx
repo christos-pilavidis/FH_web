@@ -59,7 +59,7 @@ export function Form() {
       validationSchema={ContactUsSchema}
       onSubmit={async (values, { resetForm }) => {
         try {
-          const response = await fetch('/app/api/sendEmail', {
+          const response = await fetch('/.netlify/functions/sendContactEmail', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
