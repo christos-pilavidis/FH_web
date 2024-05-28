@@ -14,8 +14,8 @@ export async function handler(event) {
   const { name, email, subject, message, phone } = requestBody;
 
   const msg = {
-    to: 'info@foxhoundgames.com', // Your recipient email address
-    from: 'info@foxhoundgames.com', // Your verified sender email address
+    to: process.env.CONTACT_MAIL_ADDRESS, // Your recipient email address
+    from: process.env.CONTACT_MAIL_ADDRESS, // Your verified sender email address
     subject: subject || 'Contact Form Submission',
     text: message || 'and easy to do anywhere, even with Node.js',
     html: `
