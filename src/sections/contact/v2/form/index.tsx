@@ -59,7 +59,7 @@ export function Form() {
       validationSchema={ContactUsSchema}
       onSubmit={async (values, { resetForm }) => {
         try {
-          const response = await fetch('/.netlify/functions/sendContactEmail', {
+          const response = await fetch('https://formspree.io/f/mvoennnw', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -67,12 +67,11 @@ export function Form() {
             body: JSON.stringify(values),
           });
 
-          const result = await response.json();
-
           if (response.ok) {
             toast.success('Thanks for getting in touch!');
             resetForm();
           } else {
+            const result = await response.json();
             toast.error(
               result.message ||
                 'Failed to send message. Please try again later.'
