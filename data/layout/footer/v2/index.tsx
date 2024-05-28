@@ -85,7 +85,6 @@ export const footerSectionData: FooterSectionProps = {
       },
     ],
   },
-
   columnThree: {
     title: 'Recent Blog',
     blogs: [
@@ -119,20 +118,20 @@ export const footerSectionData: FooterSectionProps = {
     copyrightText: '© Foxhoundgames 2024 | All Rights Reserved',
     links: [
       {
-        label: '',
-        href: '/',
-        openNewTab: false,
-      },
-      {
-        label: '',
-        href: '/',
-        openNewTab: false,
-      },
-      {
-        label: '',
-        href: '/',
+        label: 'Privacy Policy',
+        href: '/privacy-policy',
         openNewTab: false,
       },
     ],
+    textLink: {
+      href: 'https://www.gambleaware.org/',
+      textParts: [
+        { text: 'Be', bold: true },
+        { text: 'Gamble', bold: false },
+        { text: 'Aware', bold: true },
+        { text: '.org', bold: false },
+        { text: '®', bold: false },
+      ],
+    },
   },
 };

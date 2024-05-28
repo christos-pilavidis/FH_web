@@ -53,17 +53,23 @@ export const footerSectionData: FooterSectionProps = {
   },
   footerBottom: {
     copyrightText: '© Foxhoundgames 2024 | All Rights Reserved',
+
     links: [
       {
         label: '',
         href: '/',
         openNewTab: false,
       },
-      {
-        label: '',
-        href: '/',
-        openNewTab: false,
-      },
     ],
+    textLink: {
+      href: 'https://www.gambleaware.org/',
+      textParts: [
+        { text: 'Be', bold: true },
+        { text: 'Gamble', bold: false },
+        { text: 'Aware', bold: true },
+        { text: '.org', bold: false },
+        { text: '®', bold: false },
+      ],
+    },
   },
 };

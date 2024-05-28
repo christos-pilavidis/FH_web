@@ -4,6 +4,7 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 export async function handler(event) {
   if (!event.body) {
+    console.error('No payload found');
     return {
       statusCode: 400,
       body: JSON.stringify('Payload required'),
@@ -31,12 +32,16 @@ export async function handler(event) {
 
   try {
     await sgMail.send(msg);
+    console.log('Email sent successfully');
     return {
       statusCode: 200,
       body: JSON.stringify({ message: 'Email sent successfully' }),
     };
   } catch (error) {
-    console.error('Error sending email:', error);
+    console.error(
+      'Error sending email:',
+      error.response ? error.response.body : error
+    );
     return {
       statusCode: 500,
       body: JSON.stringify({ message: 'Internal Server Error' }),
