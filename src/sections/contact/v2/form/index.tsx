@@ -59,7 +59,7 @@ export function Form() {
       validationSchema={ContactUsSchema}
       onSubmit={async (values, { resetForm }) => {
         try {
-          const response = await fetch('/api/sendEmail', {
+          const response = await fetch('/app/api/sendEmail', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

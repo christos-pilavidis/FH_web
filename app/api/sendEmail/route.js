@@ -1,4 +1,3 @@
-// app/api/sendEmail/route.js
 import sgMail from '@sendgrid/mail';
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
@@ -9,9 +8,9 @@ export async function POST(req) {
     const { name, email, subject, message, phone } = body;
 
     const msg = {
-      to: process.env.CONTACT_MAIL_ADDRESS, // Use your recipient email address
-      from: 'verified-email@example.com', // Use your verified sender email address
-      subject: subject || 'Sending with SendGrid is Fun',
+      to: 'info@foxhoundgames.com', // Your recipient email address
+      from: 'noreply@foxhoundgames.com', // Your verified sender email address
+      subject: subject || 'Contact Form Submission',
       text: message || 'and easy to do anywhere, even with Node.js',
       html: `
         <h3>Name:</h3>
@@ -30,7 +29,10 @@ export async function POST(req) {
       { status: 200 }
     );
   } catch (error) {
-    console.error('Error sending email:', error.response.body);
+    console.error(
+      'Error sending email:',
+      error.response ? error.response.body : error
+    );
     return new Response(JSON.stringify({ message: 'Internal Server Error' }), {
       status: 500,
     });
