@@ -3,8 +3,7 @@ import sgMail from '@sendgrid/mail';
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 export async function handler(event) {
-  if (!event.body) {
-    console.error('No payload found');
+  if (event.body === null) {
     return {
       statusCode: 400,
       body: JSON.stringify('Payload required'),
@@ -12,13 +11,13 @@ export async function handler(event) {
   }
 
   const requestBody = JSON.parse(event.body);
-  const { name, email, phone, message } = requestBody;
+  const { name, email, subject, message, phone } = requestBody;
 
   const msg = {
-    to: process.env.CONTACT_MAIL_ADDRESS, // Your recipient email address
-    from: 'noreply@foxhoundgames.com', // Your verified sender email address
-    subject: 'New Contact Form Submission',
-    text: message,
+    to: 'info@foxhoundgames.com', // Your recipient email address
+    from: 'info@foxhoundgames.com', // Your verified sender email address
+    subject: subject || 'Contact Form Submission',
+    text: message || 'and easy to do anywhere, even with Node.js',
     html: `
       <h3>Name:</h3>
       <p>${name}</p>
@@ -32,7 +31,6 @@ export async function handler(event) {
 
   try {
     await sgMail.send(msg);
-    console.log('Email sent successfully');
     return {
       statusCode: 200,
       body: JSON.stringify({ message: 'Email sent successfully' }),
