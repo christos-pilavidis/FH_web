@@ -1,7 +1,6 @@
 import { footerSectionData } from '@/data/layout/footer/v2';
 import { ImageProps, LinkProps, SectionProps } from '@/src/common-types';
 import { Container } from '@/src/components/container';
-import { CustomLink } from '@/src/components/custom-link';
 import { cn } from '@/src/utils/shadcn';
 import { BrandLogo } from 'src/layout/brand-logo';
 import { FaEnvelope } from 'react-icons/fa6';
@@ -50,10 +49,10 @@ export interface FooterSectionProps {
 }
 
 const titleClasses = cn(
-  'text-gray-900 dark:text-white  text-md font-bold  leading-[1.25] md:text-lg mb-5 md:mb-[1.875rem]'
+  'text-gray-900 dark:text-white text-md font-bold leading-[1.25] md:text-lg mb-5 md:mb-[1.875rem]'
 );
 const addressIconParentClasses = cn(
-  ' text-primary flex-none leading-none self-start relative top-2'
+  'text-primary flex-none leading-none self-start relative top-2'
 );
 const addressItemClasses = cn('flex gap-5');
 const textColor = cn(

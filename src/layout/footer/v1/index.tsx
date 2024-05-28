@@ -1,7 +1,6 @@
 import { footerSectionData } from '@/data/layout/footer/v1';
 import { ImageProps, LinkProps, SectionProps } from '@/src/common-types';
 import { Container } from '@/src/components/container';
-import { CustomLink } from '@/src/components/custom-link';
 import { cn } from '@/src/utils/shadcn';
 import { BrandLogo } from 'src/layout/brand-logo';
 import { FaEnvelope } from 'react-icons/fa6';
@@ -101,7 +100,7 @@ export function Footer({ className }: SectionProps) {
       </div>
       <div className="flex min-h-[90px] items-center border-t border-accent-800 border-opacity-20 py-5 dark:border-body dark:border-opacity-20">
         <Container>
-          <div className="flex w-full flex-col flex-wrap items-center justify-between gap-x-8 gap-y-4 md:flex-row md:gap-x-10">
+          <div className="flex flex-col flex-wrap items-center justify-between gap-x-8 gap-y-4 md:flex-row md:gap-x-10">
             {footerBottom.textLink && (
               <a
                 href={footerBottom.textLink.href}
@@ -142,7 +141,9 @@ export function Footer({ className }: SectionProps) {
                 </span>
               </a>
             )}
-            <p>{footerBottom.copyrightText}</p>
+            <p className="text-center md:text-left">
+              {footerBottom.copyrightText}
+            </p>
           </div>
         </Container>
       </div>
