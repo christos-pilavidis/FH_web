@@ -1,5 +1,4 @@
 import { ServiceSectionProps } from '@/src/sections/service/v1';
-import svg1 from './svg1.svg';
 
 function Icon1() {
   return (
@@ -80,21 +79,18 @@ export const serviceSectionData: ServiceSectionProps = {
       title: 'Cutting-Edge Development',
       description:
         'Experience innovation at its best with our game development, setting the stage for the future of gaming',
-      slug: '/services/single',
     },
     {
       icon: <Icon2 />,
       title: 'Strategic Variety',
       description:
         'Dive into a diverse portfolio of games, each designed with strategic elements that cater to different player preferences',
-      slug: '/services/single',
     },
     {
       icon: <Icon3 />,
       title: 'Consistent Releases',
       description:
         'Dive into a continuous stream of new games. Our relentless release schedule ensures you are never out of options for fun',
-      slug: '/services/single',
     },
   ],
 };
