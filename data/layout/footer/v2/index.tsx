@@ -115,7 +115,7 @@ export const footerSectionData: FooterSectionProps = {
     location: '1212, Lav Vegas, The Veg Street, USA',
   },
   footerBottom: {
-    copyrightText: '© Foxhoundgames 2024 | All Rights Reserved',
+    copyrightText: '© 2024 Foxhound Games Ltd | All Rights Reserved',
     links: [
       {
         label: 'Privacy Policy',

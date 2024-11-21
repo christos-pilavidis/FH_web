@@ -52,7 +52,7 @@ export const footerSectionData: FooterSectionProps = {
     ],
   },
   footerBottom: {
-    copyrightText: '© Foxhoundgames 2024 | All Rights Reserved',
+    copyrightText: '© 2024 Foxhound Games Ltd | All Rights Reserved',
 
     links: [
       {
