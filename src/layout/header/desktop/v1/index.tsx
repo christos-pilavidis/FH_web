@@ -3,7 +3,6 @@
 import { LinkProps } from '@/src/common-types';
 import { Container } from '@/src/components/container';
 import { BrandLogo } from '../../../brand-logo';
-import { ContactBox, ContactBoxProps } from './contact-box';
 import { useStickyHeader } from '../../utils/use-sticky-header';
 import { cn } from '@/src/utils/shadcn';
 import { Navigation } from '../common/navigation';
@@ -15,12 +14,11 @@ interface SubMenu {
 }
 
 export interface HeaderProps {
-  contactInfo: ContactBoxProps;
   menuItems: (LinkProps | SubMenu)[];
 }
 
 export function Header() {
-  const { menuItems, contactInfo } = headerData;
+  const { menuItems } = headerData;
   const isSticky = useStickyHeader(700);
 
   return (
@@ -33,19 +31,18 @@ export function Header() {
       )}
     >
       <Container>
-        <div className="flex items-center justify-between gap-x-10">
+        <div className="flex items-center justify-center gap-x-10">
           {/* Brand logo */}
-          <div className="flex-none">
+          <div className="absolute left-4 lg:left-10">
             <BrandLogo />
           </div>
 
           {/* Navigation */}
           {menuItems && menuItems.length > 0 && (
-            <Navigation menuItems={menuItems} />
+            <div className="flex-grow">
+              <Navigation menuItems={menuItems} />
+            </div>
           )}
-
-          {/* Contact box */}
-          <ContactBox {...contactInfo} />
         </div>
       </Container>
     </header>

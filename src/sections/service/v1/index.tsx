@@ -14,15 +14,15 @@ export function ServiceSection({ services, className }: ServiceSectionProps) {
     <section className={cn('section-padding-primary', className)}>
       <Container>
         <div className="pb-32 pt-2 text-center">
-          <div
+          {/* <div
             data-aos="fade-up"
             data-aos-delay={getStaggeredDelay([200, 400, 600], 0)}
             className="mx-auto"
           >
             <h1 className="3xl:text-4xl whitespace-nowrap text-base font-bold sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl">
               Innovative Gaming. Fueled by Fire.
-            </h1>
-          </div>
+            </h1> 
+          </div>*/}
         </div>
         {services && services.length > 0 && (
           <div className="-mx-4 flex flex-wrap justify-center gap-y-30px">

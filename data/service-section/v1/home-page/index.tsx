@@ -78,19 +78,19 @@ export const serviceSectionData: ServiceSectionProps = {
       icon: <Icon1 />,
       title: 'Cutting-Edge Development',
       description:
-        'Experience innovation at its best with our game development, setting the stage for the future of gaming',
+        'Experience innovation at its best with our game development, setting the stage for the future of gaming.',
     },
     {
       icon: <Icon2 />,
       title: 'Strategic Variety',
       description:
-        'Dive into a diverse portfolio of games, each designed with strategic elements that cater to different player preferences',
+        'Striving to create a collection of unique slot games, each designed with strategic elements that cater to different player preferences.',
     },
     {
       icon: <Icon3 />,
-      title: 'Consistent Releases',
+      title: 'Experiences Await',
       description:
-        'Dive into a continuous stream of new games. Our relentless release schedule ensures you are never out of options for fun',
+        'We are laying the foundation for a lineup of thrilling slot games, designed to captivate and engage players with every release.',
     },
   ],
 };

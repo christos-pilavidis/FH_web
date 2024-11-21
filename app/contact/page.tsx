@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <MainHeader version="2" />
+      <MainHeader version="1" />
       <HeroSection
         title="Contact Us"
         breadcrumbItems={[
