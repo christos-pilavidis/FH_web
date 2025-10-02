@@ -90,7 +90,7 @@ export const serviceSectionData: ServiceSectionProps = {
       icon: <Icon3 />,
       title: 'Experiences Await',
       description:
-        'We are laying the foundation for a lineup of thrilling slot games, designed to captivate and engage players with every release.',
+        'We are laying the foundation for a lineup of thrilling games, designed to captivate and engage players with every release.',
     },
   ],
 };
